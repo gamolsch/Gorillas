@@ -1,6 +1,6 @@
 <div class="container new_survey">
 
-  <form class="new_survey_form" method="/surveys/new" action="post" name="new_survey_form">
+  <form class="new_survey_form" method="post" action="/surveys/new" name="new_survey_form">
     <div>
      <h2>Create Survey</h2>
      <span class="required_notification">* Denotes Required Field</span>
@@ -11,22 +11,22 @@
   </div>
   <div>
     <label for="question">Question:</label>
-    <textarea name="comments" cols="60" rows="1" class="html-text-box" placeholder="Question Text"></textarea>
+    <textarea name="question" cols="60" rows="1" class="html-text-box" placeholder="Question Text"></textarea>
   </div>
 
   <div>
     <label for="choices">Choices:</label>
     <div>
-      <input type="text" name="choice" placeholder="Choice 1"><span><a href="#">Add Option</a></span>
+      <input type="text" name="choice_1" placeholder="Choice 1"><span><a href="#">Add Option</a></span>
     </div>
     <div>
-      <input type="text" name="choice" placeholder="Choice 2">
+      <input type="text" name="choice_2" placeholder="Choice 2">
     </div>
     <div>
-      <input type="text" name="choice" placeholder="Choice 3">
+      <input type="text" name="choice_3" placeholder="Choice 3">
     </div>
     <div>
-      <input type="text" name="choice" placeholder="Choice 4">
+      <input type="text" name="choice_4" placeholder="Choice 4">
     </div>
   </div>
 

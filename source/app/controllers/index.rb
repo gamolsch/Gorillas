@@ -12,6 +12,19 @@ end
   end
 
   post '/surveys/new' do
+    @survey = Survey.create(title: params[:title])
 
-    redirect to '/dashboard'
+    @question = Question.create(survey_id: @survey.id,
+                                question: params[:question])
+
+    @choices = Choice.create(question_id: @question.id,
+                              choice: params[:choice_1])
+    @choices = Choice.create(question_id: @question.id,
+                              choice: params[:choice_2])
+    @choices = Choice.create(question_id: @question.id,
+                              choice: params[:choice_3])
+    @choices = Choice.create(question_id: @question.id,
+                              choice: params[:choice_4])
+
+    redirect to '/surveys/new'
   end
