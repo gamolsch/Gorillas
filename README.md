@@ -4,6 +4,7 @@ Gorillas
 Survery Gorilla
 
 ![Visual Schema v1.0](http://i.snag.gy/F4NFz.jpg)
+![Wireframes v1.0](http://i.snag.gy/pUEGE.jpg)
 
 ##Wireframes##
 
