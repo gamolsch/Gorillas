@@ -3,7 +3,7 @@ class CreateUserChoices < ActiveRecord::Migration
   	create_table :user_choices do |t|
   		t.belongs_to :user
   		t.belongs_to :choice
-  		
+
   		t.timestamps
   	end
   end
