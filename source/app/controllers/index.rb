@@ -5,9 +5,11 @@ end
 
 
 post '/' do
+  @user = User.create(email: params[:email], first_name: params[:firstname], last_name: params[:lastname])
+  @user.password = params[:password]
+  @user.save!
 
-puts params
-redirect to "/user"
+  redirect to "/user"
 end
 
 get "/user" do
@@ -18,26 +20,26 @@ end
 
 ### SURVEY CREATION ###
 
-  get '/surveys/new' do
+get '/surveys/new' do
 
-    erb :'survey_creation/new_survey'
-  end
+  erb :'survey_creation/new_survey'
+end
 
-  post '/surveys/new' do
-    @survey = Survey.create(title: params[:title])
+post '/surveys/new' do
+  @survey = Survey.create(title: params[:title])
 
-    @question = Question.create(survey_id: @survey.id,
-                                question: params[:question])
+  @question = Question.create(survey_id: @survey.id,
+                              question: params[:question])
 
-    @choices = Choice.create(question_id: @question.id,
-                              choice: params[:choice_1])
-    @choices = Choice.create(question_id: @question.id,
-                              choice: params[:choice_2])
-    @choices = Choice.create(question_id: @question.id,
-                              choice: params[:choice_3])
-    @choices = Choice.create(question_id: @question.id,
-                              choice: params[:choice_4])
+  @choices = Choice.create(question_id: @question.id,
+                            choice: params[:choice_1])
+  @choices = Choice.create(question_id: @question.id,
+                            choice: params[:choice_2])
+  @choices = Choice.create(question_id: @question.id,
+                            choice: params[:choice_3])
+  @choices = Choice.create(question_id: @question.id,
+                            choice: params[:choice_4])
 
-    redirect to '/surveys/new'
-  end
+  redirect to '/surveys/new'
+end
 
