@@ -21,10 +21,13 @@
   <header id="navbar">
     <p id="title">Survey Page</p>
   <% if session[:id] %>
+
   <ul class="nav">
     <li><a href="/">Dashboard</a></li>
     <li><a href="/">Create a Survey</a></li>
     <li><a href="/">View Surveys</a></li>
+    <li><a href="/logout">Logout</a></li>
+
   </ul>
   <%else%>
   <ul class="nav">

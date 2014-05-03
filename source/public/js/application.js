@@ -1,22 +1,10 @@
 $(document).ready(function() {
+ event.preventDefault()
   $("#create").on("click", function(){
-    $("#create-form").show()
-    $(".container").hide()
-    $("#create-form").submit(function(event){
-
-
-      $.ajax(
-      {
-        url: '/',
-        type: "post",
-        data: $(this).serialize(),
-        dataType: "html",
-        success:function(data)
-        {
-          console.log("it Works!")
-        }
-      })
-
+    $("#create-form").toggle()
     })
+  $('#sign-in').on("click", function(event){
+    event.preventDefault()
+    $("#signin-form").toggle()
   })
 });
