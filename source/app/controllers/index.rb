@@ -4,6 +4,18 @@ get '/' do
 end
 
 
+post '/' do
+
+puts params
+redirect to "/user"
+end
+
+get "/user" do
+
+  erb :dashbored
+end
+
+
 ### SURVEY CREATION ###
 
   get '/surveys/new' do
@@ -28,3 +40,4 @@ end
 
     redirect to '/surveys/new'
   end
+

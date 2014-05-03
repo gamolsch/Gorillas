@@ -7,3 +7,39 @@
 th {
   text-align: left;
 }
+#navbar{
+  background: black;
+  margin-top: 0px;
+  padding: 10px;
+}
+
+.nav {
+  margin-top: 0px;
+  list-style: none;
+  display: inline-block;
+  float: right;
+  color: gray;
+}
+#title {
+  margin-top: 0px;
+  color: gray;
+  display: inline;
+}
+.nav li {
+  display: inline;
+}
+#create-form {
+  margin-top: 50px;
+  width: 200px;
+  display: none;
+  margin-left: auto;
+  margin-right: auto;
+}
+#create-form input {
+  margin-top: 25px;
+}
+
+button {
+  margin: 20px;
+  border-radius: 5px
+}

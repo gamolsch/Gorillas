@@ -18,6 +18,21 @@
   <title></title>
 </head>
 <body>
+  <header id="navbar">
+    <p id="title">Survey Page</p>
+  <% if session[:id] %>
+  <ul class="nav">
+    <li><a href="/">Dashboard</a></li>
+    <li><a href="/">Create a Survey</a></li>
+    <li><a href="/">View Surveys</a></li>
+  </ul>
+  <%else%>
+  <ul class="nav">
+      <li><a id="sign-in" href="/">Sign-in!</a></li>
+      <li><a id="create">Create an account</a></li>
+  </ul>
+  <%end%>
+  </header>
   <%= yield %>
 </body>
 </html>
