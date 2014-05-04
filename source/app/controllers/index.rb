@@ -21,7 +21,7 @@ post '/login' do
   puts "Logging in"
   @user = User.find_by_email(params[:email])
   if @user.password == params[:password]
-    #session[:id] = @user.id
+    session[:id] = @user.id
 
     redirect to "/user"
   else
