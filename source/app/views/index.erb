@@ -1,16 +1,33 @@
+<!-- HOMEPAGE -->
+<!-- Create a survey form -->
+ <form id="create-form" method="post" action="/">
+  <h1>Create a survey</h1>
+  <input type="string" name="firstname" placeholder="First name">
+  <input type="string" name="lastname" placeholder="Last name">
+  <input type="string" name="email" placeholder="Email">
+  <input type="password" name="password" placeholder="Password">
+  <button id="submit" type="submit">Create!</button>
+</form>
 
-  <form id="create-form" method="post" action="/">
-    <input type="string" name="firstname" placeholder="firstname">
-    <input type="string" name="lastname" placeholder="Lastname">
-    <input type="string" name="email" placeholder="Email">
-    <input type="password" name="password" placeholder="Password">
-    <button id="submit" type="submit">Create!</button>
-  </form>
- <!--  <div class="container">
-</div> -->
-
+<!-- Sign in form -->
 <form id="signin-form" method="post" action="/login">
+  <h1>Sign in</h1>
   <input type="string" name="email" placeholder="Email">
   <input type="password" name="password" placeholder="Password">
   <button id="signin" type="submit">Sign in</button>
 </form>
+
+<section>
+  <h1>All surveys</h1>
+    <ul>
+      <% @surveys.each do |survey| %>
+      <li><%= survey.title %></li>
+      <a href="/surveys/<%=survey.id%>/edit">Edit</a>
+      <form action="/surveys/<%=survey.id%>/delete" method="POST">
+        <input type="submit" value="DELETE">
+      <% end %>
+    </ul>
+</section>
+
+<!-- <a href="/surveys/new" title="Add Survey">Add Survey</a>
+ -->

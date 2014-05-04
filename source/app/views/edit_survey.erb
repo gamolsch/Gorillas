@@ -1,0 +1,7 @@
+<div class="container">
+<h1>Edit a Survey</h1>
+  <form class="edit" method="POST" action="/surveys/<%=@survey.id%>">
+       <%= erb :_form_fields, layout: false %>
+
+  </form>
+</div>

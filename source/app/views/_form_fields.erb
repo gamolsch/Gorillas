@@ -1,0 +1,14 @@
+<label for="title">Survey title:</label>
+<input id="title" type="text" name="survey[title]" placeholder="Favorite Colors" value="<%= @survey.try(:title)%>" /><br>
+
+<label for="question">Question:</label>
+<textarea name="survey[question]" cols="60" rows="1" class="html-text-box" placeholder="What's your favorite color?" value="<%= @survey.try(:question)%>"></textarea><br>
+
+<label for="choices">Choices:</label>
+  <ul class="choices">
+    <li id="option"><input type="text" name="survey[1]" placeholder="Yellow" value="<%= @survey.try(:choices)%>"></li>
+  </ul>
+
+  <span><a id="add-option" href="#">Add Option</a></span><br>
+
+<input type="submit" value="Create Survey">
